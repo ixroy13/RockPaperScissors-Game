@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="instruction.png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+
+      <main>
+
+        <div class="scoreboard">
+
+          <div class="parent">
+
+            <div class="div1 player p1"><span>YOU</span></div>
+    
+            <div class="div2 result">
+              <span class="playerScore">0</span>
+              <span id="line">-</span>
+              <span class="pcScore">0</span>
+            </div>
+    
+            <div class="div3 player p2"><span>PC</span></div>
+    
+            <div class="div4 reset">
+              <button>NEW GAME</button>
+            </div>
+    
+          </div>
+
+        </div>
+
+        <div class="score">
+            <p>Zagramy?</p>
+        </div>
+
+        <div class="play-buttons">
+
+          <div class="rock" title="Rock">
+            <button class="rock game-button" value="1">
+              <i class="fa-regular fa-hand-back-fist"></i>
+            </button>
+          </div>
+  
+          <div class="paper" title="Paper">
+            <button class="paper game-button"><i class="fa-regular fa-hand"></i></button>
+          </div>
+  
+          <div class="scissors" title="Scissors">
+            <button class="scissors game-button">
+              <i class="fa-regular fa-hand-scissors"></i>
+            </button>
+          </div>
+  
+          <div class="lizard" title="Lizard">
+            <button class="lizard game-button">
+              <i class="fa-regular fa-hand-lizard"></i>
+            </button>
+          </div>
+  
+          <div class="spock" title="Spock">
+            <button class="spock game-button">
+              <i class="fa-regular fa-hand-spock"></i>
+            </button>
+          </div>
+
+        </div>
+
+        <button class="help">
+          <i class="fa-solid fa-circle-question"></i>
+        </button>
+
+      </main>
+
+</body>
+</html>
