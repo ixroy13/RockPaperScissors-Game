@@ -4,9 +4,18 @@ const scissorsButton = document.querySelector(".scissors");
 const lizardButton = document.querySelector(".lizard");
 const spockButton = document.querySelector(".spock");
 const score = document.querySelector(".score p");
-let scoreOne = document.querySelector(".playerScore");
-let scoreTwo = document.querySelector(".pcScore");
-const newGame =document.querySelector(".reset");
+const scoreOne = document.querySelector(".playerScore");
+const scoreTwo = document.querySelector(".pcScore");
+const newGame = document.querySelector(".reset");
+const helpButton = document.querySelector(".help");
+const settingsBtn = document.querySelector(".settings-btn");
+const settingsMenu = document.querySelector(".settings");
+const playerOneNick = document.querySelector("#player1name");
+const playerTwoNick = document.querySelector("#player2name");
+const p1Nick = document.querySelector(".p1 span");
+const p2Nick = document.querySelector(".p2 span");
+const p1Color = document.querySelector("#player1color");
+const p2Color = document.querySelector("#player2color");
 
 const pcChoice = () => {
   a = Math.floor(Math.random() * 5);
@@ -106,12 +115,11 @@ spockButton.onclick = () => {
   } else score.innerText = `Remis, komputer dał ${numToName(compChoice)}`;
 };
 
-//HELP BUTTON 
+//HELP BUTTON
 
-const helpButton = document.querySelector(".help");
 helpButton.onclick = () => {
   helpButton.classList.toggle("open");
-}
+};
 
 // NEW GAME BUTTON
 
@@ -121,7 +129,35 @@ newGame.onclick = () => {
     pcScore = 0;
     scoreOne.innerText = playerScore;
     scoreTwo.innerText = pcScore;
-    score.innerText = 'Nowa gra!';
+    score.innerText = "Nowa gra!";
   }
-}
+};
+
+// SETTINGS BUTTON
+
+settingsBtn.onclick = () => {
+  settingsBtn.classList.toggle("settings-animation");
+  settingsMenu.classList.toggle("settings-open");
+  document.documentElement.style.setProperty("--player-1-color", p1Color.value);
+  document.documentElement.style.setProperty("--player-2-color", p2Color.value);
+};
+
+// NICK CHANGE
+
+const changeNickOne = () => {
+  playerOneNick.value != ""
+    ? (p1Nick.innerText = playerOneNick.value)
+    : (p1Nick.innerText = "you");
+};
+
+const changeNickTwo = () => {
+  playerTwoNick.value != ""
+    ? (p2Nick.innerText = playerTwoNick.value)
+    : (p2Nick.innerText = "pc");
+};
+
+// COLOR CHANGE
+
+
+
 
