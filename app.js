@@ -138,6 +138,7 @@ newGame.onclick = () => {
 settingsBtn.onclick = () => {
   settingsBtn.classList.toggle("settings-animation");
   settingsMenu.classList.toggle("settings-open");
+  document.body.classList.toggle("non-display")
   document.documentElement.style.setProperty("--player-1-color", p1Color.value);
   document.documentElement.style.setProperty("--player-2-color", p2Color.value);
 };
